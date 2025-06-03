@@ -24,7 +24,7 @@ const Lobby = () => {
   if (roomId && gameState) {
     const players = gameState.players ? Object.values(gameState.players) : [];
     const me = players.find(p => p.id === userId); // gameState.myId is also available
-    const maxPlayers = gameState.maxPlayers || 6;
+    const maxPlayers = gameState.maxPlayers || 2;
 
     // If game is active (not LOBBY), App.js will render the game board, not this Lobby component.
     // This part is mostly for when currentPhase IS 'LOBBY'.
